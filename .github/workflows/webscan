@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: web Scan
+steps:
+  - name: ZAP Scan
+    uses: zaproxy/action-full-scan@v0.4.0
+    with:
+      target: 'https://www.zaproxy.org/'
